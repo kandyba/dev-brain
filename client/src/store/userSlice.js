@@ -7,7 +7,7 @@ export const login = createAsyncThunk(
   'user/login',
   async ({ email, password }, thunkAPI) => {
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, { email, password });
       console.log(response.data);
       return response.data;
     } catch (error) {
@@ -20,7 +20,7 @@ export const register = createAsyncThunk(
   'user/register',
   async ({ name, surname, email, password }, thunkAPI) => {
     try {
-      const response = await axios.post('/api/auth/registration', { name, surname, email, password })
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/registration`, { name, surname, email, password })
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response?.data?.message || 'Registration error');
