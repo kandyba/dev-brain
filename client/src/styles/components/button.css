@@ -1,0 +1,48 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full cursor-pointer duration-250 disabled:cursor-not-allowed;
+  }
+
+  .btn-small {
+    @apply h-10 px-5 text-sm;
+  }
+
+  .btn-medium {
+    @apply h-12;
+  }
+
+  .btn-large {
+    @apply h-12.5 px-10;
+  }
+
+  .btn-primary {
+    @apply relative text-white overflow-hidden z-10
+          active:outline-blue-focus/70 active:outline-solid active:outline-3
+          focus:outline-blue-focus/70 focus:outline-solid focus:outline-3
+          disabled:text-white/50
+          after:absolute after:inset-0 after:bg-primary-bg-hover after:-z-10 after:opacity-0 after:duration-250
+          hover:after:opacity-100;
+          background-image: linear-gradient(90deg, #DE122D 0%, #8C367C 100%);
+  }
+
+  .btn-primary-inverse {
+    @apply bg-white text-red-1000 hover:bg-red-100
+            disabled:text-red-1000/50
+            active:outline-blue-focus/70 active:outline-solid active:outline-3
+            focus:outline-blue-focus/70 focus:outline-solid focus:outline-3;
+  }
+
+  .btn-default {
+    @apply text-neutral-1000 border border-neutral-1000 hover:bg-neutral-200
+          disabled:text-neutral-1000/50 disabled:border-neutral-1000/50;
+  }
+
+  .btn-default-inverse {
+    @apply text-white border border-white hover:bg-white/15
+          disabled:text-white/50 disabled:border-white/50;
+  }
+
+  .btn-medium-square {
+    @apply h-12.5 px-5 rounded-lg;
+  }
+}

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+
+@import './base.css';
+@import './utilities.css';
+
+@import './utilities/container.css';
+
+/*Components*/
+@import "./components/header.css";
+@import "./components/button.css";
+@import "./components/footer.css";
+
+@import "./components/badge.css";
+@import "./components/form-control.css";
+
+@import "tailwindcss";

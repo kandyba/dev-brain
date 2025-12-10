@@ -1,0 +1,49 @@
+/* Theme Variables
+   --------------------------------------------------
+   Use these CSS custom properties for consistent theming.
+*/
+@theme {
+  /* Neutral Colors */
+  --color-neutral-100: #F7F9FA;
+  --color-neutral-200: #F3F5F6;
+  --color-neutral-300: #E7ECEF;
+  --color-neutral-400: #DFE5EA;
+  --color-neutral-500: #D8E0E6;
+  --color-neutral-600: #BFC7CD;
+  --color-neutral-700: #9DA4A9;
+  --color-neutral-800: #7A8084;
+  --color-neutral-900: #53585C;
+  --color-neutral-950: #2D3136;
+  --color-neutral-1000: #131618;
+
+  /* Primary & Accent Colors */
+  --color-purple-300: #D1E0F6;
+  --color-purple-500: #6185B0;
+  --color-purple-700: #285385;
+  --color-purple-1000: #002147;
+
+  /* Status Colors */
+  --color-red-100: #FFE9EA;
+  --color-red-500: #D37087;
+  --color-red-1000: #BF0820;
+  --color-orange-100: #FCF2D7;
+  --color-orange-500: #F1D791;
+  --color-orange-1000: #F1B206;
+  --color-green-100: #E5FAE1;
+  --color-green-500: #BBE0B4;
+  --color-green-1000: #20AE04;
+
+  /* Special Colors */
+  --color-special-green: #1CC43E;
+  --color-special-green-2: #26D739;
+
+  /* UI States */
+  --color-primary-bg-hover: #AA091E;
+  --color-blue-focus: rgb(149, 185, 221);
+
+  --brand: #4f46e5;
+  --brand-light: #6366f1;
+
+  /* Layout */
+  --max-container: 1232px;
+}

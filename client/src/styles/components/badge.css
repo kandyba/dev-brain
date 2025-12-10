@@ -1,0 +1,8 @@
+@layer components {
+  .badge-gradient {
+    @apply inline-block text-[15px] text-neutral-950 rounded-full px-3 py-1.5 mb-4 font-medium;
+    background: linear-gradient(67deg, #F2F6FA 0%, #F0EBF7 67.86%, #F9F4F6 100%);
+  }
+
+  .bg-brand { background-color: var(--brand); }
+}

@@ -1,0 +1,35 @@
+@layer utilities {
+  .underline-animate,
+  .general-link {
+    position: relative;
+  }
+
+  .underline-animate::after,
+  .general-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+  }
+
+  .underline-animate::after {
+    bottom: 0;
+    height: 2px;
+    background-image: linear-gradient(90deg, #DE122D 0%, #8C367C 100%);
+  }
+
+  .general-link::after {
+    height: 1px;
+    bottom: 0;
+    background-color: white;
+  }
+
+  .underline-animate:hover::after,
+  .general-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}

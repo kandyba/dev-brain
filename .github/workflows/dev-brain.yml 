@@ -1,0 +1,43 @@
+name: DevBrain CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---------- INSTALL CLIENT ----------
+      - name: Install client dependencies
+        run: |
+          cd client
+          npm install
+
+      # ---------- RUN TESTS ----------
+      - name: Run frontend tests
+        run: |
+          cd client
+          npm run test
+
+      # ---------- BUILD CLIENT ----------
+      - name: Build client
+        run: |
+          cd client
+          npm run build
+
+      # ---------- DEPLOY TO NETLIFY ----------
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: client/dist
+          production-branch: main
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        if: github.ref == 'refs/heads/main'

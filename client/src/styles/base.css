@@ -1,0 +1,43 @@
+/* Base Styles -------------------------------------------------- */
+@layer base {
+  /* Global box-sizing for consistency */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply text-base text-neutral-1000 bg-neutral-100;
+    min-width: 375px;
+  }
+
+  a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  h2 {
+    @apply text-[2rem] md:text-[2.5rem] lg:text-5xl font-medium leading-[1.3];
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  label {
+    @apply cursor-pointer;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    @apply focus:outline-none;
+  }
+}

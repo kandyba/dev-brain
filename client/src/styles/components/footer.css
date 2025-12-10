@@ -1,0 +1,14 @@
+.footer-wrapper {
+  @apply bg-[var(--color-neutral-100)]
+  text-[var(--color-neutral-1000)]
+  border-t border-[var(--color-neutral-300)]
+  py-10 md:py-14;
+}
+
+.footer-heading {
+  @apply font-semibold text-sm mb-3;
+}
+
+.footer-link {
+  @apply text-sm text-[var(--color-neutral-800)] hover:text-[var(--color-red-1000)] transition;
+}

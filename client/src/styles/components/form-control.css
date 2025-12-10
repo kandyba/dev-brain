@@ -1,0 +1,52 @@
+@layer components {
+  /* Label Styles */
+  .label-base {
+    @apply text-sm font-medium text-neutral-950 mb-2 select-none font-medium;
+  }
+
+  /* Input Styles */
+  .input-base {
+    @apply w-full px-4 py-3.5 border border-neutral-400 rounded-lg bg-neutral-100 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-600 focus:bg-white shadow-[0_1px_2px_0_rgba(16,24,40,0.04)] transition-all;
+  }
+  .input-base:disabled {
+    @apply bg-neutral-200 text-neutral-500 cursor-not-allowed;
+  }
+  .input-base.error {
+    border-color: var(--color-red-1000) !important;
+    @apply focus:border-[var(--color-red-1000)];
+  }
+
+  /* Textarea Styles */
+  .textarea-base {
+    @apply w-full px-4 py-3.5 border border-neutral-400 rounded-lg bg-neutral-100 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-600 focus:bg-white shadow-[0_1px_2px_0_rgba(16,24,40,0.04)] transition-all resize-y;
+    min-height: 160px;
+  }
+  .textarea-base:disabled {
+    @apply bg-neutral-200 text-neutral-500 cursor-not-allowed;
+  }
+  .textarea-base.error {
+    border-color: var(--color-red-1000) !important;
+    @apply focus:border-[var(--color-red-1000)];
+  }
+
+  /* Radio Styles */
+  .radio-base {
+    @apply w-[20px] h-[20px] mr-2 cursor-pointer border border-[var(--color-neutral-00)] accent-gray-900 transition-colors;
+  }
+  .radio-base:disabled {
+    @apply bg-neutral-200 border-neutral-300 cursor-not-allowed;
+  }
+
+  .radio-label {
+    @apply flex items-center cursor-pointer text-sm text-neutral-800 select-none;
+  }
+  .radio-label-selected {
+    @apply text-neutral-1000 font-semibold;
+  }
+
+  /* Error Message Styles */
+  .form-error {
+    color: var(--color-red-1000);
+    @apply text-xs mt-1;
+  }
+}
